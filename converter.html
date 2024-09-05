@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title> Currency Converter</title>
+    <link href="convertStyle.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="exchange.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <marquee>Exchange Rates</marquee>
+        <form>
+            <input class="Enter" type="number" id="amount" placeholder="Enter Amount Here"><br><br>
+            <input class="reset" type="reset" value="Reset Exchange"><br><br>
+            <div class="custom-select">
+                <select class="select" id="base" required>
+                    <option value="select" selected disabled>Select Base Currency</option>
+                    <option input>EUR</option>
+                    <option input>USD</option>
+                    <option input>HKD</option>
+                    <option input>CAD</option>
+                    <option input>ISK</option>
+                    <option input>PHP</option>
+                    <option input>DKK</option>
+                    <option input>HUF</option>
+                    <option input>CZK</option>
+                    <option input>AUD</option>
+                    <option input>RON</option>
+                    <option input>SEK</option>
+                    <option input>IDR</option>
+                    <option input>BRL</option>
+                    <option input>RUB</option>
+                    <option input>HRK</option>
+                    <option input>JPY</option>
+                    <option input>THB</option>
+                    <option input>CHF</option>
+                    <option input>SGD</option>
+                    <option input>PLN</option>
+                    <option input>BGN</option>
+                    <option input>TRY</option>
+                    <option input>CNY</option>
+                    <option input>NOK</option>
+                    <option input>NZD</option>
+                    <option input>ZAR</option>
+                    <option input>MXN</option>
+                    <option input>ILS</option>
+                    <option input>KRW</option>
+                    <option input>MYR</option>
+                    <option input>GBP</option>
+                </select>
+            </div><br>
+            <!-- Above lists all the values for the select base currency-->
+
+
+            <select class="selectCurrency" id="Currency">
+                <option value="select" selected disabled>Select Conversion Currency</option>
+                <option input>EUR</option>
+                <option input>USD</option>
+                <option input>HKD</option>
+                <option input>CAD</option>
+                <option input>ISK</option>
+                <option input>PHP</option>
+                <option input>DKK</option>
+                <option input>HUF</option>
+                <option input>CZK</option>
+                <option input>AUD</option>
+                <option input>RON</option>
+                <option input>SEK</option>
+                <option input>IDR</option>
+                <option input>BRL</option>
+                <option input>RUB</option>
+                <option input>HRK</option>
+                <option input>JPY</option>
+                <option input>THB</option>
+                <option input>CHF</option>
+                <option input>SGD</option>
+                <option input>PLN</option>
+                <option input>BGN</option>
+                <option input>TRY</option>
+                <option input>CNY</option>
+                <option input>NOK</option>
+                <option input>NZD</option>
+                <option input>ZAR</option>
+                <option input>MXN</option>
+                <option input>ILS</option>
+                <option input>KRW</option>
+                <option input>MYR</option>
+                <option input>GBP</option>
+            </select>
+            <!-- Above lists all the values for the exchange currency. Identified through the API as they hold the same values.-->
+            <br><br>
+            <input class="convert" type="button" value="Convert" onclick="currencyConvert()">
+            <input class="result" type="text" placeholder="Conversion Result" id="Output" select disabled>
+
+        </form>
+    </div>
+    <script>
+
+        async function currencyConvert() {
+            var valNum = document.getElementById("amount").value;
+            if (valNum <= 0) {
+                window.alert("Please Enter a value greater than 0");
+            }
+
+            else {
+                var base = document.getElementById("base").value;
+                var currencyValue = document.getElementById("Currency").value;
+                if (base == "select" || currencyValue == "select") {
+                    window.alert("Please pick a base and conversion currency!");
+                }
+
+                else {
+                    var rates = await getDataByBase(base);
+                    document.getElementById("Output").value = (valNum * rates[currencyValue]).toFixed(2);
+                }
+
+            }
+        }
+    </script>
+</body>
+
+</html>

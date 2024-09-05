@@ -1,0 +1,87 @@
+html {
+    font-size: 16px;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  #wrap {
+    width: 20%;
+    text-align: center;
+    margin: auto;
+    background: #fff;
+    overflow: hidden;
+    padding: 15px;
+  }
+marquee {
+      color: teal;
+      width: 450px;
+      margin: 20px auto;
+      font-family: 'Courier New', Courier, monospace;
+  }
+
+.convert {
+    padding: 8px 12px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(43, 57, 71);
+    border: 2px solid rgb(0, 0, 0);;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.convert:hover {
+    border: 2px solid rgb(142, 173, 199);
+}
+.result {
+    padding: 8px 12px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(43, 57, 71);
+    border: 2px solid rgb(0, 0, 0);;
+    border-radius: 5px;
+}
+.reset {
+    padding: 8px 12px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(43, 57, 71);
+    border: 2px solid rgb(0, 0, 0);;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.reset:hover {
+    border: 2px solid rgb(142, 173, 199);
+}
+.Enter {
+    padding: 8px 12px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(43, 57, 71);
+    border: 2px solid rgb(0, 0, 0);;
+    border-radius: 5px;
+}
+.select {
+    padding: 8px 12px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(43, 57, 71);
+    border: 2px solid rgb(0, 0, 0);;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.select:focus,
+.select:hover {
+    outline: none;
+    border: 2px solid  rgb(142, 173, 199);
+}
+.select option {
+    background:  rgb(43, 57, 71);
+}
+.selectCurrency {
+    padding: 8px 12px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(43, 57, 71);
+    border: 2px solid rgb(0, 0, 0);;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.selectCurrency:focus,
+.selectCurrency:hover {
+    outline: none;
+    border: 2px solid  rgb(142, 173, 199);
+}
