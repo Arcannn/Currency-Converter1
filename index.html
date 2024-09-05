@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cont">
+        <div class="cont">
+            <h1>Currency Converter</h1>
+        </div>
+        <div class="date">2020--</div>
+        <ul class="currencies">
+            <li class="currency base-currency" id="USD">
+                <img src= "http://www.geonames.org/flags/l/us.gif" alt="" class="flag">
+                <div class="info">
+                    <p class="input"><span class="currency-symbol">&#36;</span><input placeholder="0.0000"></p>
+                    <p class="currency-name">USD - US Dollar</p>
+                    <p class="base-currency-rate">1 EUR = 1.3000 USD</p>
+                </div>
+                <span class="close">&times;</span>
+            </li>
+            <li class="currency" id="JPY">
+                <img src= "http://www.geonames.org/flags/l/jp.gif" alt="" class="flag">
+                <div class="info">
+                    <p class="input"><span class="currency-symbol">&#165;</span><input placeholder="0.0000"></p>
+                    <p class="currency-name">JPY - Japanese Yen</p>
+                    <p class="base-currency-rate">1 EUR = 1.3000 JPY</p>
+                </div>
+                <span class="close">&times;</span>
+            </li>
+            <li class="currency" id="CAD">
+                <img src= "http://www.geonames.org/flags/l/ca.gif" alt="" class="flag">
+                <div class="info">
+                    <p class="input"><span class="currency-symbol">&#36;</span><input placeholder="0.0000"></p>
+                    <p class="currency-name">CAD - Canadian Dollar</p>
+                    <p class="base-currency-rate">1 EUR = 1.3000 CAD</p>
+                </div>
+                <span class="close">&times;</span>
+            </li>
+            <li class="currency" id="HKD">
+                <img src= "http://www.geonames.org/flags/l/hk.gif" alt="" class="flag">
+                <div class="info">
+                    <p class="input"><span class="currency-symbol">&#36;</span><input placeholder="0.0000"></p>
+                    <p class="currency-name">HKD - Hong Kong Dollar</p>
+                    <p class="base-currency-rate">1 EUR = 1.3000 HKD</p>
+                </div>
+                <span class="close">&times;</span>
+            </li>
+            <li class="currency" id="CNY">
+                <img src= "https://img.geonames.org/flags/l/cn.gif" alt="" class="flag">
+                <div class="info">
+                    <p class="input"><span class="currency-symbol">&#165;</span><input placeholder="0.0000"></p>
+                    <p class="currency-name">CNY - Chinese Yuan Renminbi</p>
+                    <p class="base-currency-rate">1 EUR = 1.3000 CNY</p>
+                </div>
+                <span class="close">&times;</span>
+            </li>
+            <li class="currency" id="RUB">
+                <img src= "https://img.geonames.org/flags/l/ru.gif" alt="" class="flag">
+                <div class="info">
+                    <p class="input"><span class="currency-symbol">RUB</span><input placeholder="0.0000"></p>
+                    <p class="currency-name">RUB - Russian Ruble</p>
+                    <p class="base-currency-rate">1 EUR = 1.3000 RUB</p>
+                </div>
+                <span class="close">&times;</span>
+            </li>
+        </ul>
+        <button class="Currency-button">Add a Currency</button>
+        <ul class="Currency-List">
+            <li data-currency="USD" class="disabled"><img src="http://www.geonames.org/flags/l/us.gif" class = "flag"><span>USD - US Dollar</span></li>
+            <li data-currency="ISK"><img src="https://img.geonames.org/flags/x/is.gif" class = "flag"><span>ISK - Icelandic króna</span></li>
+            <li data-currency="PHP"><img src="https://img.geonames.org/flags/x/ph.gif" class = "flag"><span>PHP - Philippine peso</span></li>
+            <li data-currency="DKK"><img src="https://img.geonames.org/flags/x/dk.gif" class = "flag"><span>DKK - Danish krone</span></li>
+        </ul>
+
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+</html>
